@@ -1,0 +1,5 @@
+= Default Page Parts
+
+This extension is a complete hack. It depends heavily upon how Radiant's PageController creates new pages. It overrides Page#parent= to look for a 'default_child_page_parts' page part that should contain a comma-separated list of page parts to create in the new child page. As with most things in life, use it at your own risk.
+
+So it's a hack, but a useful one. Since this extension monkeypatches class Page, it doesn't require your parent page to have a specific Page Type. You're free to use it on parent pages that might be Mailers, Archives, or any other Page Type. 
