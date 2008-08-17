@@ -3,3 +3,11 @@
 This extension is a complete hack. It depends heavily upon how Radiant's PageController creates new pages. It overrides Page#parent= to look for a 'default_child_page_parts' page part that should contain a comma-separated list of page parts to create in the new child page. As with most things in life, use it at your own risk.
 
 So it's a hack, but a useful one. Since this extension monkeypatches class Page, it doesn't require your parent page to have a specific Page Type. You're free to use it on parent pages that might be Mailers, Archives, or any other Page Type. 
+
+= How to use it
+
+Let's say you want all pages under "Events" to have the page parts "location", "description" and "date" by default. Simply add a "default_child_page_parts" page part to the "Events" page. In the content of that page part, put 
+
+location, description, date
+
+then save the "Events" page. Now when you add children to the "Events" page, they will automagically have "location", "description" and "date" page parts ready and waiting to be filled out.
